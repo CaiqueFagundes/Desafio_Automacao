@@ -1,6 +1,6 @@
 package curso.treinamento.pages;
 
-import static org.junit.Assert.*;
+import org.openqa.selenium.WebDriver;
 
 import org.junit.Test;
 import org.openqa.selenium.WebElement;
@@ -60,6 +60,7 @@ public class CadastroUsuario {
 	WebElement newssub;	
 	
 	//Metodos 
+		
 	public void clicarADDUser(){
 		btnADD.click();		
 	}

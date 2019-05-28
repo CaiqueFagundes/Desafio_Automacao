@@ -10,11 +10,10 @@ public class HomePage {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy (xpath="//div[@class='resultlogin']/div[@class ='alert alert-danger loading wow fadeIn animated animated']")
+	@FindBy (xpath="//div[@class='wrapper']/nav[@id='sidebar']/div[@class='root']/a/p/strong")
     WebElement texto;	
 	
-	
-	
+
 	//Opções do Menu 
 	
 	@FindBy (xpath="//*[@href='https://www.phptravels.net/admin-portal/admin']/i[@class='fa fa-desktop']")
@@ -68,18 +67,14 @@ public class HomePage {
 	@FindBy (xpath="// a [@class = 'article']")
     WebElement Documentation;
 	
-		
 	
+	//Métodos 
 	
-	// Metodos 
-	
-	public void subMenuGeneral() {
-		
+	public void subMenuGeneral() {		
 		General.click();
 	}
 	
 	public boolean checkAposLogin() {
-		return texto.isDisplayed();
-		
+		return texto.isDisplayed();		
 	}
 }

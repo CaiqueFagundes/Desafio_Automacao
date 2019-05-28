@@ -18,7 +18,4 @@ import cucumber.api.junit.Cucumber;
 			tags = {"@Sprint1"} 
 		)
 public class RunnerTest {
-	
-	
-	
 }

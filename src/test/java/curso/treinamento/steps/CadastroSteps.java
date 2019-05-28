@@ -1,6 +1,9 @@
 package curso.treinamento.steps;
 
+import static org.junit.Assert.*;
+
 import org.junit.Assert;
+import org.junit.Test;
 
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Então;
@@ -9,8 +12,7 @@ import curso.treinamento.pages.HomePage;
 import curso.treinamento.pages.LoginPage;
 import curso.treinamento.setup.Hooks;
 
-
-public class LoginSteps {
+public class CadastroSteps {
 
 	private LoginPage loginPage = new LoginPage(Hooks.getDriver());
 	private HomePage  HomePage = new  HomePage(Hooks.getDriver());
@@ -40,4 +42,5 @@ public class LoginSteps {
 		
 		Assert.assertTrue("Mensagem '" + mensagemLoginIncorreto+ "' não foi apresentada.", loginPage.checkMsgLoginIncorreto(mensagemLoginIncorreto));
 	}
+
 }
