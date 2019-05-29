@@ -15,7 +15,7 @@ import cucumber.api.junit.Cucumber;
 			features = {"src\\test\\resources\\features\\" },
 			glue = {"curso.treinamento.steps", "curso.treinamento.setup"},
 			snippets = SnippetType.CAMELCASE, 
-			tags = {"@Sprint1"} 
+			tags = {"@Sprint3"} 
 		)
 public class RunnerTest {
 }

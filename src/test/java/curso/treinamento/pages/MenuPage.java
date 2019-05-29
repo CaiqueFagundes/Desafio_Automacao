@@ -22,17 +22,15 @@ public class MenuPage {
 	
 	@FindBy(xpath = ".//*[text() = 'Suppliers']")
 	public WebElement subMenuCadastro;
-		
-	//Elementos Menu Pricing
 	
+	//Botão de Adicionar novos usuarios 
+	@FindBy(xpath = "//button[@type='submit'][@class='btn btn-success']")
+	WebElement btnADD;	
 	
 	//Metodos
 	public void clicarMenuCadastro() { 
 		menuCadastro.click();
 	}
-	
-	
-	
 	
 	public void clicarMenuSubCadastro() { 
 		subMenuCadastro.click();

@@ -1,10 +1,6 @@
 package curso.treinamento.steps;
 
-import static org.junit.Assert.*;
-
 import org.junit.Assert;
-import org.junit.Test;
-
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Então;
 import cucumber.api.java.pt.Quando;

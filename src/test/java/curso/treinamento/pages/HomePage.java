@@ -5,14 +5,18 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import curso.treinamento.setup.Hooks;
+
 public class HomePage {
 	public HomePage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy (xpath="//div[@class='wrapper']/nav[@id='sidebar']/div[@class='root']/a/p/strong")
-    WebElement texto;	
+	MenuPage MenuPage = new MenuPage (Hooks.getDriver());
 	
+	
+	@FindBy (xpath="//div[@class='wrapper']/nav[@id='sidebar']/div[@class='root']/a/p/strong")
+    WebElement texto;
 
 	//Opções do Menu 
 	
@@ -30,6 +34,9 @@ public class HomePage {
 	
 	@FindBy (xpath="//a [@href='#ACCOUNTS']")
     WebElement  Accounts;
+	
+	@FindBy (xpath="//a[@href='https://www.phptravels.net/admin-portal/admin/accounts/suppliers/']")
+    WebElement  Suppliers;	
 	
 	@FindBy ( xpath = "//ul[@class= 'collapse wow fadeIn animated list-unstyled'] [@id='CMS']")
 	WebElement CMS;
