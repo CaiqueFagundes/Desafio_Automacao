@@ -12,7 +12,7 @@ public class HomePage {
 		PageFactory.initElements(driver, this);
 	}
 
-	MenuPage MenuPage = new MenuPage (Hooks.getDriver());
+	MenuCadPage MenuPage = new MenuCadPage (Hooks.getDriver());
 	
 	
 	@FindBy (xpath="//div[@class='wrapper']/nav[@id='sidebar']/div[@class='root']/a/p/strong")

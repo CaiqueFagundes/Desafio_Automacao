@@ -23,4 +23,4 @@ Contexto:
      Cenário: Itens apresentados no menu Pricing
      Dado que eu esteja na tela Home
      Quando acesso o menu Pricing
-     Então sao apresentados os itens do menu "  Dashboard", "Updates", " Modules", " General", " Accounts                ", "CMS", "Hotels" e "Flights"  
+     Então sao apresentados os itens do menu "  Dashboard", "Updates", " Modules", " General", " Accounts                ", "CMS", "Hotels" e "Flights"
