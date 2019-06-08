@@ -34,9 +34,5 @@ public class LoginSteps {
 		Assert.assertTrue("Página Login não foi apresentada", HomePage.checkAposLogin());
 	}
 	
-	@Então("^é apresenta a mensagem \"([^\"]*)\"$")
-	public void éApresentaAMensagem(String mensagemLoginIncorreto) {
-		
-		Assert.assertTrue("Mensagem '" + mensagemLoginIncorreto+ "' não foi apresentada.", loginPage.checkMsgLoginIncorreto(mensagemLoginIncorreto));
-	}
+	
 }

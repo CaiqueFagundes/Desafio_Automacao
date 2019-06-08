@@ -7,20 +7,16 @@ Contexto:
     Quando faço login com o usuário "admin@phptravels.com" e senha "demoadmin"
     Então sou autenticado com sucesso
     
-    @Sprint5 @TeladeCadastro
+    @IraTeladeCadastro
     Cenário: indo para tela de cadastro
-    	Dado que eu esteja na tela home 
+    	Dado que esteja na tela Home 
     	Quando acessar submenu supplies 
-    	Então chego a tela de cadastro
+    	Então chego a tela de cadastro "ADD SUPPLIER"
     
-    @Sprint4 @efetuandocadastro
+    @Cadastro
     Cenário: Efetuando cadastro
     	Dado que eu esteja na tela cadastro
     	Quando preencher os campos validos
     	Então sou cadastrado com sucesso
 
-    @Sprint3 @MenuPricing
-     Cenário: Itens apresentados no menu Pricing
-     Dado que eu esteja na tela Home
-     Quando acesso o menu Pricing
-     Então sao apresentados os itens do menu "  Dashboard", "Updates", " Modules", " General", " Accounts                ", "CMS", "Hotels" e "Flights"
+    

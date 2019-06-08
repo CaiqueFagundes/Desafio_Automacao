@@ -19,7 +19,8 @@ public class LoginPage {
 	}
 
 
-	//objetos da tela login
+//objetos da tela login
+	
 	@FindBy(xpath = "//input[@type='text'][@name='email']")
 	WebElement campoUsuario;
 
@@ -34,7 +35,7 @@ public class LoginPage {
 
 	
 	
-	//Metodos da tela login 
+//Metodos da tela login 
 	
 	public boolean checkPage() {
 		return botaoSign.isDisplayed();
@@ -44,11 +45,8 @@ public class LoginPage {
 		campoUsuario.sendKeys(user);
 		campoPassword.sendKeys(pass);
 		botaoSign.click();
-		WebDriverWait wait = new WebDriverWait(Hooks.getDriver(), 7000);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='resultlogin']/div[@class ='alert alert-danger loading wow fadeIn animated animated']/p")));
+		WebDriverWait wait = new WebDriverWait(Hooks.getDriver(), 10000);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='wrapper']/nav[@id='sidebar']/div[@class='root']/a/p/strong")));
 	}
 
-	public boolean checkMsgLoginIncorreto(String mensagem) {
-		return msgLoginIncorreto.getText().equals(mensagem);
-	}
 }

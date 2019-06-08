@@ -1,50 +1,39 @@
 package curso.treinamento.steps;
 
+import java.awt.Menu;
+
 import org.junit.Assert;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Então;
 import cucumber.api.java.pt.Quando;
-import cucumber.api.java.pt.E;
+import curso.treinamento.pages.CadUserPage;
 import curso.treinamento.pages.HomePage;
-import curso.treinamento.pages.LoginPage;
-import curso.treinamento.pages.MenuCadPage;
 import curso.treinamento.setup.Hooks;
 
 public class CadastroSteps {
 
-	private LoginPage loginPage = new LoginPage(Hooks.getDriver());
-	private HomePage  HomePage = new  HomePage(Hooks.getDriver());
-	private MenuCadPage MenuCadPage= new MenuCadPage(Hooks.getDriver());
+//PageObjectis
+	//private LoginPage loginPage = new LoginPage(Hooks.getDriver());
+	private CadUserPage CadUserPage = new  CadUserPage(Hooks.getDriver());
+	private HomePage HomePage = new HomePage (Hooks.getDriver()); 	
 
-	@Dado("^que eu esteja na tela de Home$")
-	public void queEuEstejaNaTelaDeHome() {
+//Cenário: Efetuando cadastro	
 	
-		Assert.assertTrue("Página Login não foi apresentada", HomePage.checkAposLogin());
-	}
-
-	@Quando("Slececionar o submenu Accounts")
-	public void AcessarMenuAccounts(){
+	@Dado("que eu esteja na tela cadastro")
+	public void CheckPaginaCadastro(String TituloCadastro) {	
 		
-		MenuCadPage.clicarMenuACCOUNTS();
+		HomePage.CheckTelaCadastro(TituloCadastro);
 	}
 	
-	@E("Quando acessar submenu supplies")
-	public void AcessarSubmenuSupplies(){
+	@Quando("Quando preencher os campos validos")
+	public void Preenchercadastro(String primeiroNome, String segundoNome, String Email, String Senha, String NumeroTelefone, String Pais, String Endereco1, String Endereco2) {
 		
-		MenuCadPage.clicarMenuSubSupplier();;		
+		CadUserPage.realizarCadastro(primeiroNome, segundoNome, Email, Senha, NumeroTelefone, Endereco1, Endereco2);
 	}
-		
-	@Então("^sou Direcionado para tela de  \"([^\"]*)\"$")
-	public void souDirecionadoParaTelaMANAGEMENT(String TextoVariavel) {
-		
-		Assert.assertTrue("Mensagem '" + TextoVariavel + "' não foi apresentada.", MenuCadPage.CheckTelaCadastro(TextoVariavel));
-	}
-
 	
-	@Então("^é apresenta a mensagem \"([^\"]*)\"$")
-	public void éApresentaAMensagem(String mensagemLoginIncorreto) {
+	@Então("^sou cadastrado com sucesso\"([^\"]*)\"$")
+	public void CheckCadastro (String nomeCadastrado) {
 		
-		Assert.assertTrue("Mensagem '" + mensagemLoginIncorreto+ "' não foi apresentada.", loginPage.checkMsgLoginIncorreto(mensagemLoginIncorreto));
+		Assert.assertTrue("Usuario '" + nomeCadastrado + "' não foi apresentado.", CadUserPage.checkCadastro(nomeCadastrado));
 	}
-
 }
