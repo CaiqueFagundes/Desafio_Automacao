@@ -101,8 +101,7 @@ public class HomePage {
 		
 	}
 	
-	public boolean CheckTelaCadastro(String TituloCadastro) {
-		
+	public boolean CheckTelaCadastro(String TituloCadastro) {		
 		return Titulocadastro.getText().equals(TituloCadastro);
 	}
 	

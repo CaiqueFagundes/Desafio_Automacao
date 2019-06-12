@@ -41,7 +41,7 @@ public class CadUserPage {
 		
 //Combobox Country
 		
-		@FindBy(xpath = "//a[@class='select2-choice']")
+		@FindBy(xpath = "//div [@class='select2-container chosen-select']")
 		WebElement country;
 		
 		//itens Combobox Country
@@ -119,7 +119,7 @@ public class CadUserPage {
 		@FindBy(xpath = "//input[@name = 'itemname']")
 		WebElement campoItemname;
 		
-		@FindBy(xpath = "//input [@name='newssub']")
+		@FindBy(xpath = "//ins [@class='iCheck-helper']")
 		WebElement selectNewssub;
 		
 		
@@ -256,8 +256,8 @@ public class CadUserPage {
 		WebElement botaoSubmit;
 
 //check apos login
-		@FindBy(xpath = "//a[@href = 'mailto:c@gmail.com.br']")
-		WebElement Emailcadastrado;
+		@FindBy(xpath = "//table[@ class='xcrud-list table table-striped table-hover']/tbody/tr[1]/td[3]")
+		WebElement PrimeiroNomeCadastrado;
 		
 //Metodos 
 		//Garantindo qu esteja na tela do formulario de cadastro 
@@ -276,17 +276,18 @@ public class CadUserPage {
 			campoNumeroMobile.sendKeys(NumeroTelefone);
 			campoAddress1.sendKeys(Endereco1);
 			campoAddress2.sendKeys(Endereco2);
-			statusEnabled.isSelected();
+			country.click();
+			Brazil.click();
+			statusEnabled.click();
+			statusyes.isSelected();
 			selectNewssub.click();
 			botaoSubmit.click();
 			WebDriverWait wait = new WebDriverWait(Hooks.getDriver(), 10000);
-			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='content']/form/div[@class = 'panel panel-default']/div[1]")));
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//table[@ class='xcrud-list table table-striped table-hover']/tbody/tr[1]/td[3]"))); 
 		}				
 		//Validando o cadastro após o preenchimento do formulario
 		public boolean checkCadastro(String UsuarioCadastrado) {
-			
-			
-			return Emailcadastrado.getText().equals(UsuarioCadastrado);			
+			return PrimeiroNomeCadastrado.getText().equals(UsuarioCadastrado);			
 		}
 		
 		
