@@ -8,10 +8,10 @@
     	Então meu nome "<Nome>" é cadastrado com sucesso
 		
     Exemplos:
-    |Nome	|Sobrenome	|E-mail				|Senha			|Numero_Telefone|Endereco_1	|Endereco_2	|
-    |Ingrid	|Abril		|Ingrid@gmail.com	|987654	|987654879		|Rua Domingos	|apt 56		|		|
-    |Caique	|Fagundes	|Caique@gmail.com	|987654	|636254321		|Rua Segunda	|apt 58		|		|
-    |Cauan	|Bispo		|Cauan@gmail.com	|987654	|987698321		|Rua Quarta	|apt 59		|		|
+    |Nome	|Sobrenome	|E-mail			|Senha	|Numero_Telefone|Endereco_1	|Endereco_2	|
+    |Ingrid	|Abril		|Ingrid@gmail.com	|987654	|987654879	|Rua Domingos	|apt 56		|
+    |Caique	|Fagundes	|Caique@gmail.com	|987654	|636254321	|Rua Segunda	|apt 58		|
+    |Cauan	|Bispo		|Cauan@gmail.com	|987654	|987698321	|Rua Quarta	|apt 59		|
     
     
     
