@@ -1,6 +1,5 @@
 1) Deve escolher em qual navegador deseja abrir, para este projeto apenas está configurado o Chrome Driver. para outros navegadores é necessario importar o plugn para dentro do projeto e criar a instancia dentro da Hooks. 
-2)Para executar deve trocar os valores que serão preenchidos dentro de "Features" pois não consegui fazer o mesmo preencher 
-   com os dados da tabela abaxo.
+2)Para executar deve trocar os valores que serão preenchidos dentro de "Features".
 
  @Cadastro
     Cenário: Efetuando cadastro
@@ -9,10 +8,10 @@
     	Então meu nome "<Nome>" é cadastrado com sucesso
 		
     Exemplos:
-    |Nome	|Sobrenome	|E-mail				|Senha	|Numero_Telefone|Endereco_1		|Endereco_2	|
-    |Ingrid	|Abril		|Ingrid@gmail.com	|987654	|987654879		|Rua Domingos	|apt 56		|
-    |Caique	|Fagundes	|Caique@gmail.com	|987654	|636254321		|Rua Segunda	|apt 58		|
-    |Cauan	|Bispo		|Cauan@gmail.com	|987654	|987698321		|Rua Quarta		|apt 59		|
+    |Nome	|Sobrenome	|E-mail				|Senha			|Numero_Telefone|Endereco_1	|Endereco_2	|
+    |Ingrid	|Abril		|Ingrid@gmail.com	|987654	|987654879		|Rua Domingos	|apt 56		|		|
+    |Caique	|Fagundes	|Caique@gmail.com	|987654	|636254321		|Rua Segunda	|apt 58		|		|
+    |Cauan	|Bispo		|Cauan@gmail.com	|987654	|987698321		|Rua Quarta	|apt 59		|		|
     
     
     
